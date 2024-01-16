@@ -1,0 +1,22 @@
+body{
+    background-color: antiquewhite;
+}
+.main{
+    display: flex;
+}
+
+table, th, td {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: default;
+    
+}
+
+th, td{
+    padding: 3px 10px;
+}
+
+.FilterPopup{
+    border-radius: 5px;
+}

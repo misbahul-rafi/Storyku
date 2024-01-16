@@ -8,7 +8,6 @@ Storyku adalah aplikasi tempat menyimpan cerita yang dapat memudahkan user untuk
 - Menambahkan Story
 - Menambahkan Chapter
 
-
 ### Libraries
 - React JS
 - Express JS

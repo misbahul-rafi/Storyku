@@ -15,11 +15,6 @@ const Container = styled.div`
 `
 const ManageStory = () => {
   const navigate = useNavigate();
-  // const chapters = [{
-  //   title: "sabchdbd",
-  //   lastUpdate: "sabchdbd",
-  //   fileName: "sdvdsv"
-  // }]
   const [storyData, setStoryData] = useState({});
   const [chapters, setChapters] = useState([]);
   const {idStory} = useParams();
@@ -29,8 +24,7 @@ const ManageStory = () => {
       try {
         const storyResponse = await axios.get(`http://localhost:3000/story/${idStory}`);
         setStoryData(storyResponse.data);
-
-        // Request ke endpoint chapters
+        
         const chaptersResponse = await axios.get(`http://localhost:3000/story/chapter/${idStory}`);
         setChapters(chaptersResponse.data);
       } catch (error) {

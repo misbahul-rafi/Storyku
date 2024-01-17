@@ -17,8 +17,7 @@ const StoryEditor = ({ onStoryChange }) => {
 
   const handleStoryChange = (content, delta, source, editor) => {
     setValue(content);
-
-    // Panggil prop onStoryChange dan kirim nilai content
+    
     if (onStoryChange) {
       onStoryChange(content);
     }

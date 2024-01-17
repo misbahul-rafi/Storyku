@@ -17,7 +17,7 @@ const InputStatus = ({ onStatusChange }) => {
   ];
 
   const handleStatusChange = (event) => {
-    const selectedStatus = event.target.value === "true"; // Convert string to boolean
+    const selectedStatus = event.target.value === "true";
     onStatusChange(selectedStatus);
   };
 

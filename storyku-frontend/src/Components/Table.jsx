@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-
-
 const Table = ({ stories }) => {
   const navigate = useNavigate();
     const columns = ["Title", "Writer", "Category", "Tags", "Status", "Action"];

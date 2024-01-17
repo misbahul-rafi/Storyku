@@ -1,7 +1,6 @@
 
 import React, {useState} from 'react';
 import StoryEditor from '../Components/StoryEditor';
-import axios from 'axios';
 
 const TitleChapter = ({onTitleChange }) => (
     <div>
@@ -20,17 +19,14 @@ const ManageChapter = () => {
     const [chapterContent, setChapterContent] = useState('');
 
     const handleTitleChange = (title) => {
-        // Simpan judul ke dalam state atau lakukan aksi lainnya
         setTitleChapter(title);
       };
 
       const handleSave = () => {
         console.log(`${titleChapter}, ${chapterContent}`);
-        // Tambahkan logika penyimpanan data atau aksi lainnya di sini
       };
 
     const handleStoryChange = (content) => {
-        // Simpan konten cerita ke dalam state atau lakukan aksi lainnya
         setChapterContent(content);
       };
     return (

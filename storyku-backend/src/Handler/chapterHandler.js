@@ -1,4 +1,3 @@
-// src/controllers/chapterController.js
 const express = require('express');
 const pool = require('../database')
 
@@ -86,10 +85,8 @@ const deleteChapter = async (req, res) => {
   }
 
   try {
-    // Mengecek apakah chapterId valid
     const result = await pool.query('DELETE FROM chapters WHERE id = $1 RETURNING *', [chapterId]);
 
-    // Mengecek apakah chapter ditemukan dan dihapus
     if (result.rowCount === 0) {
       return res.status(404).json({ error: 'Chapter not found' });
     }

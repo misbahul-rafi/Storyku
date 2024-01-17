@@ -74,8 +74,6 @@ const addData = async (req, res) => {
   };
   
 
-// ...
-
 const editStoryWithId = async (req, res) => {
     try {
         console.log("Edit Jalan...")
@@ -114,15 +112,11 @@ const editStoryWithId = async (req, res) => {
 const deleteStory = async (req, res) => {
     const storyId = req.params.storyId;
     try {
-        // Mengecek apakah storyId valid
         if (!storyId) {
             return res.status(400).json({ message: 'Invalid storyId' });
         }
-
-        // Menghapus cerita berdasarkan ID
         const result = await pool.query('DELETE FROM stories WHERE id = $1 RETURNING *', [storyId]);
 
-        // Mengecek apakah cerita ditemukan dan dihapus
         if (result.rowCount === 0) {
             return res.status(404).json({ message: 'Story not found' });
         }

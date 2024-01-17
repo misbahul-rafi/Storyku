@@ -9,7 +9,7 @@ const Table = styled.table`
 const TableChapter = ({ chapters }) => {
   if (!Array.isArray(chapters)) {
     console.error('Error: "chapters" is not an array.', chapters);
-    return null; // Atau tampilkan pesan kesalahan jika diperlukan
+    return null;
   }
 
   console.log('Value of chapters:', chapters);
@@ -34,7 +34,6 @@ const TableChapter = ({ chapters }) => {
             <td>
               <button>Delete</button>
               <span> | </span>
-              {/* Pastikan bahwa fungsi updateClick sudah didefinisikan */}
               <button onClick={() => updateClick(chapter.id)}>Update</button>
             </td>
           </tr>

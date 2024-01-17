@@ -1,7 +1,7 @@
 import { FaFilter } from "react-icons/fa";
 import styled from "styled-components";
 import React, {useState} from "react";
-import FilteringPopup from "./FilteringPopUp";
+import FilteringPopup from "./FilteringPopup";
 
 
 const Header = styled.header`
